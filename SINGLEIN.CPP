@@ -1,0 +1,61 @@
+#include<iostream.h>
+#include<conio.h>
+
+class circle
+ {
+    int r;
+    float ar;
+ public:
+	void get (int a)
+	 {
+	    r=a;
+	 }
+	 void disp()
+	 {
+	   cout<<"Area="<<3.14*r*r;
+	 }
+ };
+ class rectangle :public circle
+      {
+	int l,b;
+      public:
+	   void init(int m,int n)
+	     {
+	       l=m;
+	       b=n;
+	     }
+	   void result()
+	   {
+	      cout<<"Area="<<l*b;
+	   }
+ };
+ void main()
+ {
+   int a,d,c;
+   clrscr();
+   cout<<"Enter radius of circle:";
+   cin>>a;
+
+   rectangle obj;
+   obj.get(a);
+   cout<<"Enter sides:";
+   cin>>c>>d;
+   obj.init(c,d);
+   cout<<"\n Rectangle \n";
+   obj.result();
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
